@@ -1,89 +1,240 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NexStoriess | Relatório de Tendências de Bem-Estar</title>
+
+<title>NexStoriess | Wellness Trends & Insights</title>
+
+<meta name="description" content="Análises recentes sobre tendências globais de bem-estar, energia e fórmulas naturais.">
+
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2921/2921822.png">
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-  font-family:Arial,sans-serif;
-  margin:0;
-  background:#f2f4f7;
-  color:#1f1f1f;
+font-family:Arial,sans-serif;
+background:#eef2f7;
+color:#1a1a1a;
+line-height:1.7;
 }
 
 header{
-  background:#fff;
-  padding:18px;
-  text-align:center;
-  border-bottom:1px solid #ddd;
+background:#ffffff;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #e4e7eb;
+position:sticky;
+top:0;
+z-index:999;
 }
 
-.container{
-  max-width:850px;
-  margin:auto;
-  background:#fff;
-  padding:25px;
-}
-
-h1{
-  font-size:30px;
-  line-height:1.3;
-}
-
-p{
-  font-size:16px;
-  line-height:1.7;
-}
-
-.box{
-  background:#f9f9f9;
-  border-left:4px solid #2e7d32;
-  padding:15px;
-  margin:20px 0;
-  border-radius:6px;
-}
-
-.tag{
-  background:#e8f5e9;
-  color:#2e7d32;
-  padding:5px 10px;
-  font-size:12px;
-  border-radius:5px;
-}
-
-.btn{
-  display:block;
-  text-align:center;
-  background:#1b5e20;
-  color:#fff;
-  padding:16px;
-  font-size:18px;
-  text-decoration:none;
-  border-radius:10px;
-  font-weight:bold;
-  transition:0.2s;
-}
-
-.btn:hover{
-  transform:scale(1.03);
-  background:#145a18;
-}
-
-footer{
-  text-align:center;
-  padding:20px;
-  font-size:12px;
-  color:#777;
+.logo{
+font-size:26px;
+font-weight:bold;
+color:#1b5e20;
 }
 
 nav a{
-  margin:0 10px;
-  text-decoration:none;
-  color:#2e7d32;
-  font-size:13px;
+margin-left:20px;
+text-decoration:none;
+color:#444;
+font-size:14px;
+transition:0.2s;
+}
+
+nav a:hover{
+color:#1b5e20;
+}
+
+.hero{
+padding:70px 8%;
+background:linear-gradient(135deg,#ffffff,#edf6ef);
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+}
+
+.tag{
+display:inline-block;
+background:#e8f5e9;
+color:#1b5e20;
+padding:8px 14px;
+font-size:12px;
+border-radius:30px;
+margin-bottom:20px;
+font-weight:bold;
+}
+
+.hero h1{
+font-size:52px;
+line-height:1.2;
+max-width:800px;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:19px;
+color:#555;
+max-width:750px;
+margin-bottom:35px;
+}
+
+.hero img{
+width:100%;
+border-radius:20px;
+margin-top:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+.btn{
+display:inline-block;
+background:linear-gradient(135deg,#1b5e20,#2e7d32);
+color:#fff;
+padding:18px 34px;
+font-size:18px;
+font-weight:bold;
+text-decoration:none;
+border-radius:14px;
+transition:0.25s;
+box-shadow:0 10px 20px rgba(0,0,0,0.12);
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.section{
+padding:80px 8%;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:#fff;
+padding:28px;
+border-radius:18px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.card h3{
+margin-bottom:12px;
+font-size:22px;
+}
+
+.card p{
+color:#555;
+font-size:15px;
+}
+
+.highlight{
+background:#ffffff;
+padding:60px;
+border-radius:24px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+margin-top:60px;
+}
+
+.highlight h2{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.highlight p{
+font-size:18px;
+color:#555;
+margin-bottom:30px;
+}
+
+.spacer{
+height:50px;
+}
+
+.info-box{
+background:#f7faf7;
+border-left:5px solid #1b5e20;
+padding:22px;
+border-radius:12px;
+margin:30px 0;
+font-size:16px;
+}
+
+.cta-section{
+text-align:center;
+padding:90px 8%;
+background:linear-gradient(135deg,#1b5e20,#2e7d32);
+color:#fff;
+margin-top:70px;
+}
+
+.cta-section h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.cta-section p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+margin-bottom:40px;
+opacity:0.92;
+}
+
+.cta-section .btn{
+background:#fff;
+color:#1b5e20;
+}
+
+footer{
+background:#ffffff;
+padding:40px 8%;
+text-align:center;
+font-size:13px;
+color:#666;
+border-top:1px solid #e4e7eb;
+}
+
+footer a{
+color:#1b5e20;
+text-decoration:none;
+margin:0 10px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.highlight{
+padding:35px;
+}
+
+.cta-section h2{
+font-size:32px;
+}
+
 }
 
 </style>
@@ -92,7 +243,10 @@ nav a{
 <body>
 
 <header>
-<strong>NexStoriess</strong>
+
+<div class="logo">
+NexStoriess
+</div>
 
 <nav>
 <a href="index.html">Início</a>
@@ -102,67 +256,112 @@ nav a{
 
 </header>
 
+<section class="hero">
+
 <div class="container">
 
-<span class="tag">Relatório Informativo</span>
+<span class="tag">
+WELLNESS REPORT 2026
+</span>
 
 <h1>
-Análise recente sobre o aumento do interesse em fórmulas naturais de bem-estar
+As novas tendências de bem-estar e energia natural que estão chamando atenção globalmente
 </h1>
 
-<div class="box">
-<strong>Atualização recente:</strong>
-novas análises sobre o setor de bem-estar estão chamando atenção no mercado internacional.
-</div>
-
 <p>
-O interesse global por soluções naturais de energia, foco e equilíbrio corporal tem crescido de forma consistente nos últimos anos.
-</p>
-
-<div class="box">
-Este conteúdo é informativo e não promove produtos médicos ou tratamentos.
-</div>
-
-<h2>O que está impulsionando essa tendência?</h2>
-
-<p>
-Pesquisas em comportamento mostram que o estilo de vida moderno tem aumentado a busca por alternativas naturais.
-</p>
-
-<h2>Pontos mais discutidos atualmente</h2>
-
-<ul>
-<li>Energia diária e produtividade</li>
-<li>Interesse por soluções naturais</li>
-<li>Bem-estar e rotina saudável</li>
-</ul>
-
-<p style="font-size:14px;color:#555;">
-Este conteúdo é baseado em informações públicas e tendências do setor de bem-estar.
+Análises recentes mostram um aumento expressivo no interesse por soluções naturais ligadas à energia, produtividade e equilíbrio corporal.
 </p>
 
 <a class="btn" href="https://ead7cktn5ismp1voykk2sgnj8l.hop.clickbank.net?utm_source=google&utm_campaign=presell1">
-CONTINUAR PARA ANÁLISE COMPLETA
+VER RELATÓRIO COMPLETO →
 </a>
 
-<div class="box">
-Novas análises continuam surgindo nesse mercado em expansão.
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1400&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<h3>Energia Diária</h3>
+<p>
+O interesse por fórmulas naturais voltadas à produtividade e disposição cresceu significativamente nos últimos anos.
+</p>
+</div>
+
+<div class="card">
+<h3>Rotina Saudável</h3>
+<p>
+Especialistas observam uma forte tendência de consumidores buscando alternativas ligadas ao wellness moderno.
+</p>
+</div>
+
+<div class="card">
+<h3>Mercado Global</h3>
+<p>
+O setor de bem-estar continua expandindo rapidamente em mercados internacionais.
+</p>
+</div>
+
+</div>
+
+<div class="highlight">
+
+<h2>
+Por que isso está recebendo tanta atenção?
+</h2>
+
+<p>
+Mudanças nos hábitos modernos fizeram crescer o interesse em conteúdos relacionados à saúde natural, foco mental e equilíbrio corporal.
+</p>
+
+<div class="info-box">
+Atualização recente: novas análises continuam surgindo sobre tendências de wellness e suporte natural à energia diária.
 </div>
 
 <a class="btn" href="https://ead7cktn5ismp1voykk2sgnj8l.hop.clickbank.net?utm_source=google&utm_campaign=presell1">
-VER MAIS DETALHES
+CONTINUAR PARA ANÁLISE →
 </a>
 
-<p style="font-size:12px;text-align:center;color:#777;margin-top:15px;">
-Conteúdo apenas informativo. Resultados podem variar.
-</p>
+</div>
 
 </div>
+
+</section>
+
+<section class="cta-section">
+
+<h2>
+Veja as análises completas
+</h2>
+
+<p>
+Descubra os detalhes e tendências mais comentadas atualmente sobre o crescimento do setor de bem-estar natural.
+</p>
+
+<a class="btn" href="https://ead7cktn5ismp1voykk2sgnj8l.hop.clickbank.net?utm_source=google&utm_campaign=presell1">
+ACESSAR INFORMAÇÕES →
+</a>
+
+</section>
 
 <footer>
-NexStoriess © 2026 |
-<a href="about.html">Sobre</a> |
+
+<p>
+NexStoriess © 2026
+</p>
+
+<div style="margin-top:12px;">
+<a href="about.html">Sobre</a>
 <a href="privacy.html">Privacidade</a>
+</div>
+
 </footer>
 
 </body>
