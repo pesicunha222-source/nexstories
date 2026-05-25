@@ -1,368 +1,484 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+# index.html — Versão Premium Direta + Compliance
 
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>NexStoriess | Wellness Trends & Insights</title>
-
-<meta name="description" content="Análises recentes sobre tendências globais de bem-estar, energia e fórmulas naturais.">
-
+<title>NexStoriess | Wellness Insights & Product Information</title>
+<meta name="description" content="Editorial wellness insights, product information and transparency-focused content related to energy, metabolism and healthy lifestyle trends.">
 <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2921/2921822.png">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:#eef2f7;
-color:#1a1a1a;
-line-height:1.7;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f4f7fb;
+  color:#1a1a1a;
+  line-height:1.7;
 }
 
 header{
-background:#ffffff;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #e4e7eb;
-position:sticky;
-top:0;
-z-index:999;
+  background:#ffffff;
+  border-bottom:1px solid #e6e6e6;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.header-wrap{
+  max-width:1180px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 20px;
 }
 
 .logo{
-font-size:26px;
-font-weight:bold;
-color:#1b5e20;
+  font-size:24px;
+  font-weight:700;
+  color:#0f172a;
 }
 
 nav a{
-margin-left:20px;
-text-decoration:none;
-color:#444;
-font-size:14px;
-transition:0.2s;
-}
-
-nav a:hover{
-color:#1b5e20;
+  text-decoration:none;
+  margin-left:20px;
+  color:#334155;
+  font-size:14px;
+  font-weight:600;
 }
 
 .hero{
-padding:70px 8%;
-background:linear-gradient(135deg,#ffffff,#edf6ef);
+  max-width:1180px;
+  margin:50px auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+  padding:0 20px;
 }
 
-.container{
-max-width:1100px;
-margin:auto;
+.hero-text span{
+  background:#dcfce7;
+  color:#166534;
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:bold;
+  display:inline-block;
+  margin-bottom:18px;
 }
 
-.tag{
-display:inline-block;
-background:#e8f5e9;
-color:#1b5e20;
-padding:8px 14px;
-font-size:12px;
-border-radius:30px;
-margin-bottom:20px;
-font-weight:bold;
+.hero-text h1{
+  font-size:48px;
+  line-height:1.15;
+  margin-bottom:22px;
+  color:#0f172a;
 }
 
-.hero h1{
-font-size:52px;
-line-height:1.2;
-max-width:800px;
-margin-bottom:25px;
+.hero-text p{
+  font-size:18px;
+  color:#475569;
+  margin-bottom:28px;
 }
 
-.hero p{
-font-size:19px;
-color:#555;
-max-width:750px;
-margin-bottom:35px;
+.hero-image img{
+  width:100%;
+  border-radius:24px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.12);
 }
 
-.hero img{
-width:100%;
-border-radius:20px;
-margin-top:25px;
-box-shadow:0 10px 30px rgba(0,0,0,0.12);
+.notice{
+  background:#ffffff;
+  border-left:5px solid #16a34a;
+  padding:18px;
+  border-radius:12px;
+  margin-bottom:25px;
+  color:#334155;
 }
 
 .btn{
-display:inline-block;
-background:linear-gradient(135deg,#1b5e20,#2e7d32);
-color:#fff;
-padding:18px 34px;
-font-size:18px;
-font-weight:bold;
-text-decoration:none;
-border-radius:14px;
-transition:0.25s;
-box-shadow:0 10px 20px rgba(0,0,0,0.12);
+  display:inline-block;
+  background:#166534;
+  color:#ffffff;
+  text-decoration:none;
+  padding:18px 34px;
+  border-radius:14px;
+  font-weight:bold;
+  transition:0.2s;
+  font-size:17px;
 }
 
 .btn:hover{
-transform:translateY(-3px);
+  transform:scale(1.03);
+  background:#14532d;
 }
 
 .section{
-padding:80px 8%;
+  max-width:1180px;
+  margin:70px auto;
+  padding:0 20px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:40px;
+.section-title{
+  font-size:36px;
+  margin-bottom:18px;
+  color:#0f172a;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:35px;
 }
 
 .card{
-background:#fff;
-padding:28px;
-border-radius:18px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  background:#ffffff;
+  padding:30px;
+  border-radius:22px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.06);
 }
 
 .card h3{
-margin-bottom:12px;
-font-size:22px;
+  margin-bottom:14px;
+  color:#0f172a;
 }
 
 .card p{
-color:#555;
-font-size:15px;
+  color:#475569;
+  font-size:15px;
 }
 
-.highlight{
-background:#ffffff;
-padding:60px;
-border-radius:24px;
-box-shadow:0 8px 25px rgba(0,0,0,0.05);
-margin-top:60px;
+.product-box{
+  background:#ffffff;
+  border-radius:26px;
+  padding:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.06);
 }
 
-.highlight h2{
-font-size:38px;
-margin-bottom:20px;
+.product-box img{
+  width:100%;
+  border-radius:18px;
 }
 
-.highlight p{
-font-size:18px;
-color:#555;
-margin-bottom:30px;
+.product-info h2{
+  font-size:38px;
+  margin-bottom:18px;
+  color:#0f172a;
 }
 
-.spacer{
-height:50px;
+.product-info ul{
+  margin:20px 0;
+  padding-left:18px;
 }
 
-.info-box{
-background:#f7faf7;
-border-left:5px solid #1b5e20;
-padding:22px;
-border-radius:12px;
-margin:30px 0;
-font-size:16px;
+.product-info li{
+  margin-bottom:12px;
+  color:#334155;
 }
 
-.cta-section{
-text-align:center;
-padding:90px 8%;
-background:linear-gradient(135deg,#1b5e20,#2e7d32);
-color:#fff;
-margin-top:70px;
+.transparency{
+  background:#ffffff;
+  border-radius:20px;
+  padding:35px;
+  margin-top:50px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
-.cta-section h2{
-font-size:42px;
-margin-bottom:20px;
+.transparency h3{
+  margin-bottom:18px;
+  color:#0f172a;
 }
 
-.cta-section p{
-font-size:18px;
-max-width:700px;
-margin:auto;
-margin-bottom:40px;
-opacity:0.92;
-}
-
-.cta-section .btn{
-background:#fff;
-color:#1b5e20;
+.transparency p{
+  color:#475569;
+  margin-bottom:14px;
 }
 
 footer{
-background:#ffffff;
-padding:40px 8%;
-text-align:center;
-font-size:13px;
-color:#666;
-border-top:1px solid #e4e7eb;
+  background:#0f172a;
+  color:#cbd5e1;
+  margin-top:80px;
+  padding:50px 20px;
 }
 
-footer a{
-color:#1b5e20;
-text-decoration:none;
-margin:0 10px;
+.footer-wrap{
+  max-width:1180px;
+  margin:auto;
 }
 
-@media(max-width:768px){
-
-header{
-flex-direction:column;
-gap:15px;
+.footer-links{
+  margin-top:20px;
 }
 
-.hero h1{
-font-size:38px;
+.footer-links a{
+  color:#cbd5e1;
+  text-decoration:none;
+  margin-right:18px;
+  font-size:14px;
 }
 
-.highlight{
-padding:35px;
+.small{
+  font-size:13px;
+  color:#64748b;
+  margin-top:20px;
 }
 
-.cta-section h2{
-font-size:32px;
+@media(max-width:900px){
+
+.hero,
+.product-box{
+  grid-template-columns:1fr;
+}
+
+.hero-text h1{
+  font-size:36px;
+}
+
+.section-title{
+  font-size:28px;
+}
+
+.product-info h2{
+  font-size:30px;
 }
 
 }
 
 </style>
 </head>
-
 <body>
 
 <header>
+  <div class="header-wrap">
+    <div class="logo">NexStoriess</div>
 
-<div class="logo">
-NexStoriess
-</div>
-
-<nav>
-<a href="index.html">Início</a>
-<a href="about.html">Sobre</a>
-<a href="privacy.html">Privacidade</a>
-</nav>
-
+    <nav>
+      <a href="#about">About</a>
+      <a href="#transparency">Transparency</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero">
 
-<div class="container">
+  <div class="hero-text">
 
-<span class="tag">
-WELLNESS REPORT 2026
-</span>
+    <span>GLOBAL WELLNESS INSIGHTS</span>
 
-<h1>
-As novas tendências de energia, metabolismo e performance saudável que estão dominando o mercado wellness
-</h1>
+    <h1>
+      Natural energy, metabolism and wellness trends attracting global attention
+    </h1>
 
-<p>
-Especialistas observam um crescimento acelerado nas buscas por suporte natural à energia diária, metabolismo saudável, foco mental e performance física no estilo de vida moderno.
-</p>
+    <p>
+      Editorial content focused on wellness lifestyle trends, product information and natural health support categories related to modern routines and healthy living.
+    </p>
 
-<a class="btn" href="https://ead7cktn5ismp1voykk2sgnj8l.hop.clickbank.net?utm_source=google&utm_campaign=presell1">
-VER RELATÓRIO COMPLETO →
-</a>
+    <div class="notice">
+      This website provides informational and editorial content only. It does not provide medical advice, diagnosis or treatment.
+    </div>
 
-<img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1400&auto=format&fit=crop">
+    <a class="btn" href="https://ead7cktn5ismp1voykk2sgnj8l.hop.clickbank.net?utm_source=google&utm_campaign=nexstories">
+      CONTINUE TO OFFICIAL INFORMATION →
+    </a>
 
-</div>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1400&auto=format&fit=crop" alt="Wellness Lifestyle">
+  </div>
+
+</section>
+
+<section class="section" id="about">
+
+  <h2 class="section-title">
+    Why wellness categories continue growing online
+  </h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Modern Lifestyle</h3>
+      <p>
+        Consumers increasingly search for information related to healthy habits, daily energy, focus and wellness support.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Natural Support</h3>
+      <p>
+        Interest in natural wellness categories and healthy lifestyle products continues expanding globally.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Performance & Routine</h3>
+      <p>
+        Productivity, balance and healthy routines remain among the most discussed wellness topics online.
+      </p>
+    </div>
+
+  </div>
 
 </section>
 
 <section class="section">
 
-<div class="container">
+  <div class="product-box">
 
-<div class="grid">
+    <div>
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1400&auto=format&fit=crop" alt="Wellness Product">
+    </div>
 
-<div class="card">
-<h3>Energia Diária</h3>
-<p>
-O interesse por fórmulas naturais voltadas à produtividade e disposição cresceu significativamente nos últimos anos.
-</p>
-</div>
+    <div class="product-info">
 
-<div class="card">
-<h3>Rotina Saudável</h3>
-<p>
-Especialistas observam uma forte tendência de consumidores buscando alternativas ligadas ao wellness moderno.
-</p>
-</div>
+      <h2>
+        Product Information & Transparency
+      </h2>
 
-<div class="card">
-<h3>Mercado Global</h3>
-<p>
-O setor de bem-estar continua expandindo rapidamente em mercados internacionais.
-</p>
-</div>
+      <p>
+        This page may contain affiliate links related to wellness and lifestyle products. We aim to provide clear and transparent informational content.
+      </p>
 
-</div>
+      <ul>
+        <li>Editorial and informational content only</li>
+        <li>No medical claims or guaranteed results</li>
+        <li>Product details are provided by official vendors</li>
+        <li>Individual experiences may vary</li>
+        <li>Always consult qualified professionals when necessary</li>
+      </ul>
 
-<div class="highlight">
+      <a class="btn" href="https://ead7cktn5ismp1voykk2sgnj8l.hop.clickbank.net?utm_source=google&utm_campaign=nexstories">
+        ACCESS OFFICIAL WEBSITE
+      </a>
 
-<h2>
-Por que isso está recebendo tanta atenção?
-</h2>
+    </div>
 
-<p>
-Mudanças nos hábitos modernos fizeram crescer o interesse em conteúdos relacionados à saúde natural, foco mental e equilíbrio corporal.
-</p>
-
-<div class="info-box">
-Atualização recente: novas análises continuam surgindo sobre tendências de wellness e suporte natural à energia diária.
-</div>
-
-<a class="btn" href="https://ead7cktn5ismp1voykk2sgnj8l.hop.clickbank.net?utm_source=google&utm_campaign=presell1">
-CONTINUAR PARA ANÁLISE →
-</a>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-<section class="cta-section">
+<section class="section" id="transparency">
 
-<h2>
-Veja as análises completas
-</h2>
+  <div class="transparency">
 
-<p>
-Descubra os detalhes e tendências mais comentadas atualmente sobre o crescimento do setor de bem-estar natural.
-</p>
+    <h3>Transparency Notice</h3>
 
-<a class="btn" href="https://ead7cktn5ismp1voykk2sgnj8l.hop.clickbank.net?utm_source=google&utm_campaign=presell1">
-ACESSAR RELATÓRIO COMPLETO →
-</a>
+    <p>
+      NexStoriess publishes editorial wellness-related content and may receive compensation from affiliate partnerships when visitors access external websites through links on this page.
+    </p>
+
+    <p>
+      The content available on this website is intended exclusively for informational and educational purposes.
+    </p>
+
+    <p>
+      Statements on this website have not been evaluated by the Food and Drug Administration (FDA). Products mentioned are not intended to diagnose, treat, cure or prevent any disease.
+    </p>
+
+    <p>
+      Always review official product information directly on the vendor's website before making purchasing decisions.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="section" id="privacy">
+
+  <div class="transparency">
+
+    <h3>Privacy Policy</h3>
+
+    <p>
+      We may collect anonymous analytical information such as browser type, device information and website interaction data to improve user experience.
+    </p>
+
+    <p>
+      This website may use cookies and tracking technologies for analytics and advertising optimization.
+    </p>
+
+    <p>
+      Third-party platforms including advertising partners may use cookies according to their own policies.
+    </p>
+
+    <p>
+      By using this website, you agree to the use of cookies and informational tracking technologies.
+    </p>
+
+  </div>
 
 </section>
 
 <footer>
 
-<p>
-NexStoriess © 2026
-</p>
+  <div class="footer-wrap">
 
-<div style="margin-top:12px;">
-<a href="about.html">Sobre</a>
-<a href="privacy.html">Privacidade</a>
-</div>
+    <h3>NexStoriess</h3>
+
+    <p class="small">
+      Wellness editorial content and product information platform.
+    </p>
+
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#transparency">Transparency</a>
+      <a href="#privacy">Privacy Policy</a>
+    </div>
+
+    <p class="small">
+      © 2026 NexStoriess. All Rights Reserved.
+    </p>
+
+  </div>
 
 </footer>
 
 </body>
 </html>
+```
+
+# COMO USAR
+
+1. Abra o arquivo:
+
+```text
+index.html
+```
+
+2. APAGUE tudo.
+
+3. Cole esse código inteiro.
+
+4. Troque apenas o link do botão caso mudar de produto.
+
+5. Commit changes.
+
+Pronto.
+
+Essa versão já deixa:
+
+* visual premium
+* aparência empresa americana
+* compliance muito mais forte
+* transparência melhor
+* política integrada
+* aviso de afiliado
+* cara editorial
+* mais segura pro Google Ads
+* estrutura limpa e rápida
