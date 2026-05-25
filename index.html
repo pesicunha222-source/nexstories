@@ -1,484 +1,528 @@
-# index.html — Versão Premium Direta + Compliance
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NexStoriess | Wellness Insights & Product Information</title>
-<meta name="description" content="Editorial wellness insights, product information and transparency-focused content related to energy, metabolism and healthy lifestyle trends.">
-<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2921/2921822.png">
+
+<title>ProstaVive | Men's Wellness & Healthy Urinary Flow Support</title>
+
+<meta name="description" content="Discover advanced men's wellness support focused on healthy urinary flow, prostate wellness and male vitality.">
+
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
 
 <style>
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#f4f7fb;
-  color:#1a1a1a;
-  line-height:1.7;
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f7fb;
+color:#1e293b;
+line-height:1.7;
 }
 
 header{
-  background:#ffffff;
-  border-bottom:1px solid #e6e6e6;
-  position:sticky;
-  top:0;
-  z-index:100;
+background:#0f172a;
+padding:18px 20px;
+border-bottom:1px solid rgba(255,255,255,0.08);
+position:sticky;
+top:0;
+z-index:999;
 }
 
 .header-wrap{
-  max-width:1180px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 20px;
+max-width:1180px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-  font-size:24px;
-  font-weight:700;
-  color:#0f172a;
+font-size:24px;
+font-weight:bold;
+color:#ffffff;
 }
 
 nav a{
-  text-decoration:none;
-  margin-left:20px;
-  color:#334155;
-  font-size:14px;
-  font-weight:600;
+text-decoration:none;
+margin-left:20px;
+color:#cbd5e1;
+font-size:14px;
 }
 
 .hero{
-  max-width:1180px;
-  margin:50px auto;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  align-items:center;
-  padding:0 20px;
+max-width:1180px;
+margin:auto;
+padding:70px 20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
 }
 
-.hero-text span{
-  background:#dcfce7;
-  color:#166534;
-  padding:8px 14px;
-  border-radius:30px;
-  font-size:12px;
-  font-weight:bold;
-  display:inline-block;
-  margin-bottom:18px;
+.tag{
+background:#dcfce7;
+color:#166534;
+padding:8px 14px;
+border-radius:30px;
+font-size:12px;
+font-weight:bold;
+display:inline-block;
+margin-bottom:20px;
 }
 
-.hero-text h1{
-  font-size:48px;
-  line-height:1.15;
-  margin-bottom:22px;
-  color:#0f172a;
+.hero h1{
+font-size:56px;
+line-height:1.1;
+margin-bottom:24px;
+color:#0f172a;
 }
 
-.hero-text p{
-  font-size:18px;
-  color:#475569;
-  margin-bottom:28px;
-}
-
-.hero-image img{
-  width:100%;
-  border-radius:24px;
-  box-shadow:0 10px 40px rgba(0,0,0,0.12);
+.hero p{
+font-size:18px;
+color:#475569;
+margin-bottom:24px;
 }
 
 .notice{
-  background:#ffffff;
-  border-left:5px solid #16a34a;
-  padding:18px;
-  border-radius:12px;
-  margin-bottom:25px;
-  color:#334155;
+background:#ffffff;
+padding:18px;
+border-left:5px solid #16a34a;
+border-radius:14px;
+margin-bottom:28px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.hero-image img{
+width:100%;
+border-radius:28px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+.accept-box{
+background:#ffffff;
+padding:22px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.accept-box label{
+font-size:15px;
+color:#334155;
+display:flex;
+align-items:flex-start;
+gap:10px;
+}
+
+.accept-box input{
+margin-top:5px;
+transform:scale(1.2);
 }
 
 .btn{
-  display:inline-block;
-  background:#166534;
-  color:#ffffff;
-  text-decoration:none;
-  padding:18px 34px;
-  border-radius:14px;
-  font-weight:bold;
-  transition:0.2s;
-  font-size:17px;
+display:inline-block;
+background:#166534;
+color:#fff;
+padding:18px 34px;
+border-radius:14px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+transition:0.2s;
+pointer-events:none;
+opacity:0.5;
+}
+
+.btn.active{
+pointer-events:auto;
+opacity:1;
 }
 
 .btn:hover{
-  transform:scale(1.03);
-  background:#14532d;
+transform:scale(1.03);
+background:#14532d;
 }
 
 .section{
-  max-width:1180px;
-  margin:70px auto;
-  padding:0 20px;
+max-width:1180px;
+margin:80px auto;
+padding:0 20px;
 }
 
 .section-title{
-  font-size:36px;
-  margin-bottom:18px;
-  color:#0f172a;
+font-size:40px;
+margin-bottom:20px;
+color:#0f172a;
 }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-  margin-top:35px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:35px;
 }
 
 .card{
-  background:#ffffff;
-  padding:30px;
-  border-radius:22px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.06);
+background:#ffffff;
+padding:30px;
+border-radius:24px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 .card h3{
-  margin-bottom:14px;
-  color:#0f172a;
+margin-bottom:15px;
+font-size:22px;
+color:#0f172a;
 }
 
 .card p{
-  color:#475569;
-  font-size:15px;
+color:#475569;
+font-size:15px;
 }
 
-.product-box{
-  background:#ffffff;
-  border-radius:26px;
-  padding:40px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
-  box-shadow:0 10px 30px rgba(0,0,0,0.06);
+.product{
+background:#ffffff;
+padding:45px;
+border-radius:30px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px;
+align-items:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
 }
 
-.product-box img{
-  width:100%;
-  border-radius:18px;
+.product img{
+width:100%;
+border-radius:24px;
 }
 
-.product-info h2{
-  font-size:38px;
-  margin-bottom:18px;
-  color:#0f172a;
+.product h2{
+font-size:42px;
+margin-bottom:20px;
+color:#0f172a;
 }
 
-.product-info ul{
-  margin:20px 0;
-  padding-left:18px;
+.product ul{
+padding-left:18px;
+margin:25px 0;
 }
 
-.product-info li{
-  margin-bottom:12px;
-  color:#334155;
+.product li{
+margin-bottom:12px;
+color:#334155;
 }
 
-.transparency{
-  background:#ffffff;
-  border-radius:20px;
-  padding:35px;
-  margin-top:50px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+.cta-box{
+background:#0f172a;
+padding:35px;
+border-radius:26px;
+margin-top:35px;
+text-align:center;
 }
 
-.transparency h3{
-  margin-bottom:18px;
-  color:#0f172a;
+.cta-box h3{
+font-size:32px;
+margin-bottom:15px;
+color:#ffffff;
 }
 
-.transparency p{
-  color:#475569;
-  margin-bottom:14px;
+.cta-box p{
+color:#cbd5e1;
+margin-bottom:24px;
 }
 
-footer{
-  background:#0f172a;
-  color:#cbd5e1;
-  margin-top:80px;
-  padding:50px 20px;
+.footer{
+background:#0f172a;
+color:#cbd5e1;
+padding:60px 20px;
+margin-top:80px;
 }
 
 .footer-wrap{
-  max-width:1180px;
-  margin:auto;
-}
-
-.footer-links{
-  margin-top:20px;
-}
-
-.footer-links a{
-  color:#cbd5e1;
-  text-decoration:none;
-  margin-right:18px;
-  font-size:14px;
+max-width:1180px;
+margin:auto;
 }
 
 .small{
-  font-size:13px;
-  color:#64748b;
-  margin-top:20px;
+font-size:13px;
+line-height:1.8;
+color:#94a3b8;
+margin-top:20px;
 }
 
 @media(max-width:900px){
 
 .hero,
-.product-box{
-  grid-template-columns:1fr;
+.product{
+grid-template-columns:1fr;
 }
 
-.hero-text h1{
-  font-size:36px;
+.hero h1{
+font-size:40px;
+}
+
+.product h2{
+font-size:34px;
 }
 
 .section-title{
-  font-size:28px;
-}
-
-.product-info h2{
-  font-size:30px;
+font-size:32px;
 }
 
 }
 
 </style>
+
 </head>
+
 <body>
 
 <header>
-  <div class="header-wrap">
-    <div class="logo">NexStoriess</div>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#transparency">Transparency</a>
-      <a href="#privacy">Privacy</a>
-    </nav>
-  </div>
+<div class="header-wrap">
+
+<div class="logo">
+NexStoriess
+</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#support">Support</a>
+<a href="#transparency">Transparency</a>
+</nav>
+
+</div>
+
 </header>
 
 <section class="hero">
 
-  <div class="hero-text">
+<div>
 
-    <span>GLOBAL WELLNESS INSIGHTS</span>
+<span class="tag">
+MEN'S WELLNESS REPORT
+</span>
 
-    <h1>
-      Natural energy, metabolism and wellness trends attracting global attention
-    </h1>
+<h1>
+Advanced prostate wellness support for healthy urinary flow and male vitality
+</h1>
 
-    <p>
-      Editorial content focused on wellness lifestyle trends, product information and natural health support categories related to modern routines and healthy living.
-    </p>
+<p>
+Men worldwide are increasingly exploring wellness support solutions related to healthy urinary flow, circulation, vitality and prostate-focused lifestyle support.
+</p>
 
-    <div class="notice">
-      This website provides informational and editorial content only. It does not provide medical advice, diagnosis or treatment.
-    </div>
+<div class="notice">
+This website contains editorial and informational content related to wellness support products and healthy lifestyle topics for adult men.
+</div>
 
-    <a class="btn" href="https://ead7cktn5ismp1voykk2sgnj8l.hop.clickbank.net?utm_source=google&utm_campaign=nexstories">
-      CONTINUE TO OFFICIAL INFORMATION →
-    </a>
+<div class="accept-box">
 
-  </div>
+<label>
 
-  <div class="hero-image">
-    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1400&auto=format&fit=crop" alt="Wellness Lifestyle">
-  </div>
+<input type="checkbox" id="accept">
+
+<span>
+I understand this website may contain affiliate links and informational wellness content. I accept the terms and wish to continue.
+</span>
+
+</label>
+
+</div>
+
+<a id="continueBtn" class="btn" href="https://1906eerk5n0hu1zb586807cw6d.hop.clickbank.net?utm_source=google&utm_campaign=prostavive">
+CONTINUE TO OFFICIAL PRODUCT PAGE →
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1400&auto=format&fit=crop" alt="Male Wellness Lifestyle">
+
+</div>
 
 </section>
 
 <section class="section" id="about">
 
-  <h2 class="section-title">
-    Why wellness categories continue growing online
-  </h2>
+<h2 class="section-title">
+Why prostate wellness has become a major men's health topic
+</h2>
 
-  <div class="cards">
+<div class="grid">
 
-    <div class="card">
-      <h3>Modern Lifestyle</h3>
-      <p>
-        Consumers increasingly search for information related to healthy habits, daily energy, focus and wellness support.
-      </p>
-    </div>
+<div class="card">
 
-    <div class="card">
-      <h3>Natural Support</h3>
-      <p>
-        Interest in natural wellness categories and healthy lifestyle products continues expanding globally.
-      </p>
-    </div>
+<h3>
+Healthy Urinary Flow
+</h3>
 
-    <div class="card">
-      <h3>Performance & Routine</h3>
-      <p>
-        Productivity, balance and healthy routines remain among the most discussed wellness topics online.
-      </p>
-    </div>
+<p>
+Modern wellness discussions increasingly focus on urinary comfort, healthy circulation and nighttime routine support.
+</p>
 
-  </div>
+</div>
+
+<div class="card">
+
+<h3>
+Male Vitality
+</h3>
+
+<p>
+Energy, confidence, healthy performance and lifestyle wellness continue attracting attention among adult men worldwide.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Natural Wellness Support
+</h3>
+
+<p>
+Wellness-focused formulas with plant-based ingredients and circulation support nutrients continue growing in popularity.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
-<section class="section">
+<section class="section" id="support">
 
-  <div class="product-box">
+<div class="product">
 
-    <div>
-      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1400&auto=format&fit=crop" alt="Wellness Product">
-    </div>
+<div>
 
-    <div class="product-info">
+<img src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?q=80&w=1400&auto=format&fit=crop" alt="Prostate Wellness Support">
 
-      <h2>
-        Product Information & Transparency
-      </h2>
+</div>
 
-      <p>
-        This page may contain affiliate links related to wellness and lifestyle products. We aim to provide clear and transparent informational content.
-      </p>
+<div>
 
-      <ul>
-        <li>Editorial and informational content only</li>
-        <li>No medical claims or guaranteed results</li>
-        <li>Product details are provided by official vendors</li>
-        <li>Individual experiences may vary</li>
-        <li>Always consult qualified professionals when necessary</li>
-      </ul>
+<h2>
+ProstaVive Wellness Support Formula
+</h2>
 
-      <a class="btn" href="https://ead7cktn5ismp1voykk2sgnj8l.hop.clickbank.net?utm_source=google&utm_campaign=nexstories">
-        ACCESS OFFICIAL WEBSITE
-      </a>
+<p>
+ProstaVive is a men's wellness-focused supplement formula designed to support healthy urinary flow, circulation and vitality through a blend of carefully selected ingredients commonly associated with male wellness support routines.
+</p>
 
-    </div>
+<ul>
 
-  </div>
+<li>Daily men's wellness support</li>
+
+<li>Focused on healthy urinary flow</li>
+
+<li>Circulation and vitality support</li>
+
+<li>Plant-based ingredient blend</li>
+
+<li>Wellness-focused lifestyle formula</li>
+
+<li>Adult men's support routine</li>
+
+</ul>
+
+<div class="cta-box">
+
+<h3>
+Explore Official Product Information
+</h3>
+
+<p>
+Access the official ProstaVive website to learn more about ingredients, usage information and wellness support details.
+</p>
+
+<a id="continueBtn2" class="btn" href="https://1906eerk5n0hu1zb586807cw6d.hop.clickbank.net?utm_source=google&utm_campaign=prostavive">
+VIEW OFFICIAL DETAILS
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 <section class="section" id="transparency">
 
-  <div class="transparency">
+<div class="card">
 
-    <h3>Transparency Notice</h3>
+<h3>
+Transparency & Affiliate Disclosure
+</h3>
 
-    <p>
-      NexStoriess publishes editorial wellness-related content and may receive compensation from affiliate partnerships when visitors access external websites through links on this page.
-    </p>
+<p>
+NexStoriess may receive compensation through affiliate partnerships when visitors access third-party websites through links available on this page.
+</p>
 
-    <p>
-      The content available on this website is intended exclusively for informational and educational purposes.
-    </p>
+<p>
+This website provides editorial and informational content only and does not provide medical advice, diagnosis or treatment.
+</p>
 
-    <p>
-      Statements on this website have not been evaluated by the Food and Drug Administration (FDA). Products mentioned are not intended to diagnose, treat, cure or prevent any disease.
-    </p>
+<p>
+Statements regarding wellness support products have not been evaluated by the Food and Drug Administration (FDA). Products are not intended to diagnose, treat, cure or prevent any disease.
+</p>
 
-    <p>
-      Always review official product information directly on the vendor's website before making purchasing decisions.
-    </p>
+<p>
+Individual experiences may vary. Always review official product information directly from the vendor before making purchasing decisions.
+</p>
 
-  </div>
-
-</section>
-
-<section class="section" id="privacy">
-
-  <div class="transparency">
-
-    <h3>Privacy Policy</h3>
-
-    <p>
-      We may collect anonymous analytical information such as browser type, device information and website interaction data to improve user experience.
-    </p>
-
-    <p>
-      This website may use cookies and tracking technologies for analytics and advertising optimization.
-    </p>
-
-    <p>
-      Third-party platforms including advertising partners may use cookies according to their own policies.
-    </p>
-
-    <p>
-      By using this website, you agree to the use of cookies and informational tracking technologies.
-    </p>
-
-  </div>
+</div>
 
 </section>
 
-<footer>
+<footer class="footer">
 
-  <div class="footer-wrap">
+<div class="footer-wrap">
 
-    <h3>NexStoriess</h3>
+<h3>
+NexStoriess
+</h3>
 
-    <p class="small">
-      Wellness editorial content and product information platform.
-    </p>
+<p class="small">
+Editorial wellness content and men's lifestyle information platform focused on modern wellness support categories.
+</p>
 
-    <div class="footer-links">
-      <a href="#about">About</a>
-      <a href="#transparency">Transparency</a>
-      <a href="#privacy">Privacy Policy</a>
-    </div>
+<p class="small">
+© 2026 NexStoriess — All Rights Reserved.
+</p>
 
-    <p class="small">
-      © 2026 NexStoriess. All Rights Reserved.
-    </p>
-
-  </div>
+</div>
 
 </footer>
 
+<script>
+
+const checkbox = document.getElementById('accept');
+const btn = document.getElementById('continueBtn');
+const btn2 = document.getElementById('continueBtn2');
+
+checkbox.addEventListener('change', function(){
+
+if(this.checked){
+btn.classList.add('active');
+btn2.classList.add('active');
+}else{
+btn.classList.remove('active');
+btn2.classList.remove('active');
+}
+
+});
+
+</script>
+
 </body>
 </html>
-```
-
-# COMO USAR
-
-1. Abra o arquivo:
-
-```text
-index.html
-```
-
-2. APAGUE tudo.
-
-3. Cole esse código inteiro.
-
-4. Troque apenas o link do botão caso mudar de produto.
-
-5. Commit changes.
-
-Pronto.
-
-Essa versão já deixa:
-
-* visual premium
-* aparência empresa americana
-* compliance muito mais forte
-* transparência melhor
-* política integrada
-* aviso de afiliado
-* cara editorial
-* mais segura pro Google Ads
-* estrutura limpa e rápida
