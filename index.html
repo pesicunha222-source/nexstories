@@ -5,9 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ProstaVive | Men's Wellness Support</title>
+<title>ProstaVive | Advanced Men's Wellness Support</title>
 
-<meta name="description" content="Discover wellness-focused support designed for healthy urinary flow, circulation and male vitality.">
+<meta name="description" content="Advanced wellness support for healthy urinary flow, circulation and male vitality.">
 
 <style>
 
@@ -19,7 +19,7 @@ box-sizing:border-box;
 
 body{
 font-family:Arial,Helvetica,sans-serif;
-background:#eef2f7;
+background:#eef3f8;
 color:#0f172a;
 line-height:1.7;
 }
@@ -31,6 +31,7 @@ border-bottom:1px solid #e2e8f0;
 position:sticky;
 top:0;
 z-index:999;
+backdrop-filter:blur(8px);
 }
 
 .header-wrap{
@@ -41,15 +42,45 @@ justify-content:space-between;
 align-items:center;
 }
 
-.logo img{
-height:42px;
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
 }
 
+.logo-icon{
+width:48px;
+height:48px;
+border-radius:14px;
+background:linear-gradient(135deg,#166534,#22c55e);
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:22px;
+font-weight:bold;
+box-shadow:0 8px 20px rgba(34,197,94,0.25);
+}
+
+.logo-text{
+font-size:24px;
+font-weight:bold;
+color:#0f172a;
+}
+
+.logo-text span{
+display:block;
+font-size:12px;
+font-weight:normal;
+color:#64748b;
+margin-top:-4px;
+}
 
 nav a{
 text-decoration:none;
 margin-left:20px;
 font-size:14px;
+font-weight:600;
 color:#475569;
 }
 
@@ -92,7 +123,7 @@ padding:18px;
 border-left:5px solid #16a34a;
 border-radius:14px;
 margin-bottom:25px;
-box-shadow:0 5px 20px rgba(0,0,0,0.04);
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 .accept-box{
@@ -118,7 +149,7 @@ transform:scale(1.2);
 
 .btn{
 display:inline-block;
-background:#166534;
+background:linear-gradient(135deg,#166534,#22c55e);
 color:#fff;
 padding:18px 34px;
 border-radius:16px;
@@ -128,6 +159,7 @@ font-weight:bold;
 transition:0.2s;
 pointer-events:none;
 opacity:0.5;
+box-shadow:0 10px 25px rgba(34,197,94,0.25);
 }
 
 .btn.active{
@@ -137,20 +169,20 @@ opacity:1;
 
 .btn:hover{
 transform:scale(1.03);
-background:#14532d;
 }
 
 .hero-image{
 background:#ffffff;
-padding:35px;
+padding:20px;
 border-radius:30px;
 box-shadow:0 15px 40px rgba(0,0,0,0.08);
-text-align:center;
+overflow:hidden;
 }
 
 .hero-image img{
-max-width:100%;
+width:100%;
 border-radius:20px;
+display:block;
 }
 
 .section{
@@ -162,6 +194,7 @@ padding:0 20px;
 .section-title{
 font-size:42px;
 margin-bottom:20px;
+text-align:center;
 }
 
 .cards{
@@ -188,42 +221,56 @@ font-size:15px;
 color:#475569;
 }
 
-.product-showcase{
+.ingredients{
 background:#ffffff;
 padding:50px;
 border-radius:34px;
 box-shadow:0 10px 35px rgba(0,0,0,0.06);
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
+margin-top:50px;
 }
 
-.product-showcase img{
+.ingredients img{
 width:100%;
 border-radius:24px;
+margin-bottom:30px;
 }
 
-.product-showcase h2{
-font-size:44px;
-margin-bottom:20px;
+.ingredients h2{
+font-size:42px;
+margin-bottom:18px;
 }
 
-.product-showcase ul{
-padding-left:18px;
-margin:24px 0;
+.ingredients-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px;
 }
 
-.product-showcase li{
-margin-bottom:12px;
-color:#334155;
+.ing-box{
+background:#f8fafc;
+padding:22px;
+border-radius:20px;
+border:1px solid #e2e8f0;
+}
+
+.ing-box h4{
+font-size:20px;
+margin-bottom:10px;
+color:#166534;
+}
+
+.ing-box p{
+font-size:14px;
+color:#475569;
 }
 
 .cta-box{
 background:#0f172a;
-padding:35px;
+padding:40px;
 border-radius:28px;
-margin-top:30px;
+margin-top:40px;
+text-align:center;
 }
 
 .cta-box h3{
@@ -234,7 +281,7 @@ margin-bottom:15px;
 
 .cta-box p{
 color:#cbd5e1;
-margin-bottom:22px;
+margin-bottom:24px;
 }
 
 footer{
@@ -258,8 +305,7 @@ margin-top:20px;
 
 @media(max-width:900px){
 
-.hero,
-.product-showcase{
+.hero{
 grid-template-columns:1fr;
 }
 
@@ -267,12 +313,13 @@ grid-template-columns:1fr;
 font-size:42px;
 }
 
-.product-showcase h2{
+.section-title,
+.ingredients h2{
 font-size:34px;
 }
 
-.section-title{
-font-size:34px;
+nav{
+display:none;
 }
 
 }
@@ -287,15 +334,22 @@ font-size:34px;
 
 <div class="header-wrap">
 
-
 <div class="logo">
-<img src="SUA-LOGO.png" alt="NexStoriess Logo">
+
+<div class="logo-icon">
+N
 </div>
 
+<div class="logo-text">
+NexStoriess
+<span>Men's Wellness Platform</span>
+</div>
+
+</div>
 
 <nav>
 <a href="#wellness">Wellness</a>
-<a href="#product">Product</a>
+<a href="#ingredients">Ingredients</a>
 <a href="#transparency">Transparency</a>
 </nav>
 
@@ -308,19 +362,19 @@ font-size:34px;
 <div>
 
 <span class="tag">
-MEN'S WELLNESS SUPPORT
+ADVANCED MEN'S WELLNESS
 </span>
 
 <h1>
-Support healthy urinary flow, circulation and male vitality naturally
+Natural support for healthy urinary flow, circulation and male vitality
 </h1>
 
 <p>
-Men across the world are increasingly exploring wellness-focused support solutions designed for prostate wellness, circulation and everyday vitality.
+Modern men's wellness discussions increasingly focus on circulation support, urinary comfort, vitality and plant-based wellness routines.
 </p>
 
 <div class="notice">
-This website provides informational wellness-related content and product insights intended for adult audiences.
+This website provides informational wellness-related content intended for adult audiences interested in men's wellness support.
 </div>
 
 <div class="accept-box">
@@ -345,7 +399,7 @@ VIEW PRODUCT DETAILS →
 
 <div class="hero-image">
 
-<img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?q=80&w=1200&auto=format&fit=crop" alt="Supplement Bottle">
+<img src="ProstaviveIngredients1-2.jpg" alt="ProstaVive Ingredients">
 
 </div>
 
@@ -354,7 +408,7 @@ VIEW PRODUCT DETAILS →
 <section class="section" id="wellness">
 
 <h2 class="section-title">
-Why men are paying attention to prostate wellness support
+Why wellness-focused prostate support is gaining attention
 </h2>
 
 <div class="cards">
@@ -366,7 +420,7 @@ Healthy Urinary Flow
 </h3>
 
 <p>
-Modern wellness discussions increasingly focus on urinary comfort, circulation and nighttime routine support.
+Men increasingly seek wellness support related to urinary comfort and healthy circulation routines.
 </p>
 
 </div>
@@ -378,7 +432,7 @@ Male Vitality
 </h3>
 
 <p>
-Confidence, energy, circulation and healthy daily routines continue becoming major men's wellness priorities.
+Confidence, energy, circulation and lifestyle wellness continue becoming major priorities among adult men.
 </p>
 
 </div>
@@ -386,11 +440,11 @@ Confidence, energy, circulation and healthy daily routines continue becoming maj
 <div class="card">
 
 <h3>
-Natural Wellness Routines
+Plant-Based Wellness
 </h3>
 
 <p>
-Plant-based wellness formulas and lifestyle support products continue growing in popularity worldwide.
+Natural ingredients and wellness-focused nutritional routines continue growing in popularity worldwide.
 </p>
 
 </div>
@@ -399,41 +453,71 @@ Plant-based wellness formulas and lifestyle support products continue growing in
 
 </section>
 
-<section class="section" id="product">
+<section class="section" id="ingredients">
 
-<div class="product-showcase">
+<div class="ingredients">
 
-<div>
-
-<img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=1200&auto=format&fit=crop" alt="Men Wellness Supplement">
-
-</div>
-
-<div>
+<img src="ProstaviveIngredients1-2.jpg" alt="ProstaVive Formula">
 
 <h2>
-ProstaVive Wellness Formula
+ProstaVive Ingredient Spotlight
 </h2>
 
 <p>
-ProstaVive combines carefully selected ingredients commonly associated with men's wellness support, healthy circulation and urinary wellness routines.
+ProstaVive combines a selection of wellness-focused ingredients commonly associated with circulation support, vitality and men's wellness routines.
 </p>
 
-<ul>
+<div class="ingredients-grid">
 
-<li>Daily wellness support for men</li>
+<div class="ing-box">
 
-<li>Healthy urinary flow support</li>
+<h4>
+Tongkat Ali
+</h4>
 
-<li>Circulation-focused ingredient blend</li>
+<p>
+Traditionally associated with male vitality, energy and wellness support routines.
+</p>
 
-<li>Male vitality support formula</li>
+</div>
 
-<li>Plant-based wellness ingredients</li>
+<div class="ing-box">
 
-<li>Adult men's wellness routine</li>
+<h4>
+Ashwagandha
+</h4>
 
-</ul>
+<p>
+Widely used in wellness discussions related to stress balance and vitality support.
+</p>
+
+</div>
+
+<div class="ing-box">
+
+<h4>
+Panax Ginseng
+</h4>
+
+<p>
+Commonly associated with circulation, energy and overall wellness support.
+</p>
+
+</div>
+
+<div class="ing-box">
+
+<h4>
+Maca Root
+</h4>
+
+<p>
+Popular ingredient often connected to vitality and men's wellness support.
+</p>
+
+</div>
+
+</div>
 
 <div class="cta-box">
 
@@ -442,14 +526,12 @@ Access Official Product Information
 </h3>
 
 <p>
-Learn more about ingredients, usage details and wellness-focused support information directly from the official source.
+Learn more about ingredients, usage information and wellness support details directly from the official source.
 </p>
 
 <a id="btn2" class="btn" href="https://1906eerk5n0hu1zb586807cw6d.hop.clickbank.net?utm_source=google&utm_campaign=prostavive">
 ACCESS OFFICIAL INFORMATION
 </a>
-
-</div>
 
 </div>
 
@@ -489,9 +571,18 @@ Products mentioned are not intended to diagnose, treat, cure or prevent any dise
 
 <div class="footer-wrap">
 
-<h3>
+<div class="logo">
+
+<div class="logo-icon">
+N
+</div>
+
+<div class="logo-text">
 NexStoriess
-</h3>
+<span>Men's Wellness Platform</span>
+</div>
+
+</div>
 
 <p class="small">
 Editorial wellness content and modern men's lifestyle information platform.
