@@ -1,6 +1,3 @@
-# Substitua TODO o conteúdo do seu index.html por este código
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,20 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ProstaVive | Men's Wellness Support</title>
-
 <meta name="description" content="Discover wellness-focused support designed for healthy urinary flow, circulation and male vitality.">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
 font-family:Arial,Helvetica,sans-serif;
-background:#eef2f7;
+background:#eef7fc;
 color:#0f172a;
 line-height:1.7;
 }
@@ -30,11 +21,10 @@ line-height:1.7;
 header{
 background:#ffffff;
 padding:18px 20px;
-border-bottom:1px solid #e2e8f0;
+border-bottom:1px solid #dbeafe;
 position:sticky;
 top:0;
 z-index:999;
-backdrop-filter:blur(8px);
 }
 
 .header-wrap{
@@ -58,14 +48,14 @@ color:#0f172a;
 width:48px;
 height:48px;
 border-radius:14px;
-background:linear-gradient(135deg,#166534,#22c55e);
+background:linear-gradient(135deg,#0ea5e9,#38bdf8);
 display:flex;
 align-items:center;
 justify-content:center;
 color:#fff;
 font-size:22px;
 font-weight:bold;
-box-shadow:0 8px 20px rgba(34,197,94,0.25);
+box-shadow:0 8px 20px rgba(14,165,233,0.25);
 }
 
 .logo-text span{
@@ -96,8 +86,8 @@ align-items:center;
 
 .tag{
 display:inline-block;
-background:#dcfce7;
-color:#166534;
+background:#e0f2fe;
+color:#0284c7;
 padding:8px 14px;
 border-radius:40px;
 font-size:12px;
@@ -111,6 +101,10 @@ line-height:1.05;
 margin-bottom:26px;
 }
 
+.hero h1 span{
+color:#0284c7;
+}
+
 .hero p{
 font-size:18px;
 color:#475569;
@@ -120,7 +114,7 @@ margin-bottom:24px;
 .notice{
 background:#ffffff;
 padding:18px;
-border-left:5px solid #16a34a;
+border-left:5px solid #38bdf8;
 border-radius:14px;
 margin-bottom:25px;
 box-shadow:0 5px 20px rgba(0,0,0,0.04);
@@ -149,7 +143,7 @@ transform:scale(1.2);
 
 .btn{
 display:inline-block;
-background:linear-gradient(135deg,#166534,#22c55e);
+background:linear-gradient(135deg,#0ea5e9,#38bdf8);
 color:#fff;
 padding:18px 34px;
 border-radius:16px;
@@ -159,7 +153,7 @@ font-weight:bold;
 transition:0.2s;
 pointer-events:none;
 opacity:0.5;
-box-shadow:0 10px 25px rgba(34,197,94,0.25);
+box-shadow:0 10px 25px rgba(14,165,233,0.25);
 }
 
 .btn.active{
@@ -173,31 +167,16 @@ transform:scale(1.03);
 
 .hero-image{
 background:#ffffff;
-padding:35px;
+padding:20px;
 border-radius:30px;
 box-shadow:0 15px 40px rgba(0,0,0,0.08);
 text-align:center;
-position:relative;
-overflow:hidden;
-}
-
-.hero-image::before{
-content:'';
-position:absolute;
-width:180px;
-height:180px;
-background:#dcfce7;
-border-radius:50%;
-top:-60px;
-right:-60px;
-opacity:0.6;
 }
 
 .hero-image img{
-max-width:100%;
+width:100%;
 border-radius:20px;
-position:relative;
-z-index:2;
+display:block;
 }
 
 .section{
@@ -209,6 +188,7 @@ padding:0 20px;
 .section-title{
 font-size:42px;
 margin-bottom:20px;
+text-align:center;
 }
 
 .cards{
@@ -304,30 +284,12 @@ margin-top:20px;
 }
 
 @media(max-width:900px){
-
-.hero,
-.product-showcase{
-grid-template-columns:1fr;
+.hero,.product-showcase{grid-template-columns:1fr}
+.hero h1{font-size:42px}
+.product-showcase h2{font-size:34px}
+.section-title{font-size:34px}
+nav{display:none}
 }
-
-.hero h1{
-font-size:42px;
-}
-
-.product-showcase h2{
-font-size:34px;
-}
-
-.section-title{
-font-size:34px;
-}
-
-nav{
-display:none;
-}
-
-}
-
 </style>
 
 </head>
@@ -335,20 +297,14 @@ display:none;
 <body>
 
 <header>
-
 <div class="header-wrap">
 
 <div class="logo">
-
-<div class="logo-icon">
-N
-</div>
-
+<div class="logo-icon">N</div>
 <div class="logo-text">
 NexStoriess
 <span>Men's Wellness Platform</span>
 </div>
-
 </div>
 
 <nav>
@@ -358,19 +314,16 @@ NexStoriess
 </nav>
 
 </div>
-
 </header>
 
 <section class="hero">
 
 <div>
 
-<span class="tag">
-MEN'S WELLNESS SUPPORT
-</span>
+<span class="tag">MEN'S WELLNESS SUPPORT</span>
 
 <h1>
-Support healthy urinary flow, circulation and male vitality naturally
+Support healthy urinary flow, circulation and <span>male vitality</span>
 </h1>
 
 <p>
@@ -382,17 +335,12 @@ This website provides informational wellness-related content and product insight
 </div>
 
 <div class="accept-box">
-
 <label>
-
 <input type="checkbox" id="accept">
-
 <span>
 I understand this is an informational wellness page and wish to continue to the official product details.
 </span>
-
 </label>
-
 </div>
 
 <a id="btn1" class="btn" href="https://1906eerk5n0hu1zb586807cw6d.hop.clickbank.net?utm_source=google&utm_campaign=prostavive">
@@ -402,9 +350,7 @@ VIEW PRODUCT DETAILS →
 </div>
 
 <div class="hero-image">
-
-<img src=<img src="/mnt/data/ProstaviveIngredients1-2.jpg" alt="ProstaVive Ingredients">
-
+<img src="prostavive-banner.png" alt="ProstaVive Natural Ingredients">
 </div>
 
 </section>
@@ -418,39 +364,18 @@ Why men are paying attention to prostate wellness support
 <div class="cards">
 
 <div class="card">
-
-<h3>
-Healthy Urinary Flow
-</h3>
-
-<p>
-Modern wellness discussions increasingly focus on urinary comfort, circulation and nighttime routine support.
-</p>
-
+<h3>Healthy Urinary Flow</h3>
+<p>Modern wellness discussions increasingly focus on urinary comfort, circulation and nighttime routine support.</p>
 </div>
 
 <div class="card">
-
-<h3>
-Male Vitality
-</h3>
-
-<p>
-Confidence, energy, circulation and healthy daily routines continue becoming major men's wellness priorities.
-</p>
-
+<h3>Male Vitality</h3>
+<p>Confidence, energy, circulation and healthy daily routines continue becoming major men's wellness priorities.</p>
 </div>
 
 <div class="card">
-
-<h3>
-Natural Wellness Routines
-</h3>
-
-<p>
-Plant-based wellness formulas and lifestyle support products continue growing in popularity worldwide.
-</p>
-
+<h3>Natural Wellness Routines</h3>
+<p>Plant-based wellness formulas and lifestyle support products continue growing in popularity worldwide.</p>
 </div>
 
 </div>
@@ -462,51 +387,33 @@ Plant-based wellness formulas and lifestyle support products continue growing in
 <div class="product-showcase">
 
 <div>
-
-<img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=1200&auto=format&fit=crop" alt="Men Wellness Supplement">
-
+<img src="prostavive-banner.png" alt="ProstaVive Formula">
 </div>
 
 <div>
 
-<h2>
-ProstaVive Wellness Formula
-</h2>
+<h2>ProstaVive Wellness Formula</h2>
 
 <p>
 ProstaVive combines carefully selected ingredients commonly associated with men's wellness support, healthy circulation and urinary wellness routines.
 </p>
 
 <ul>
-
 <li>Daily wellness support for men</li>
-
 <li>Healthy urinary flow support</li>
-
 <li>Circulation-focused ingredient blend</li>
-
 <li>Male vitality support formula</li>
-
 <li>Plant-based wellness ingredients</li>
-
 <li>Adult men's wellness routine</li>
-
 </ul>
 
 <div class="cta-box">
-
-<h3>
-Access Official Product Information
-</h3>
-
-<p>
-Learn more about ingredients, usage details and wellness-focused support information directly from the official source.
-</p>
+<h3>Access Official Product Information</h3>
+<p>Learn more about ingredients, usage details and wellness-focused support information directly from the official source.</p>
 
 <a id="btn2" class="btn" href="https://1906eerk5n0hu1zb586807cw6d.hop.clickbank.net?utm_source=google&utm_campaign=prostavive">
 ACCESS OFFICIAL INFORMATION
 </a>
-
 </div>
 
 </div>
@@ -519,25 +426,15 @@ ACCESS OFFICIAL INFORMATION
 
 <div class="card">
 
-<h3>
-Transparency & Editorial Notice
-</h3>
+<h3>Transparency & Editorial Notice</h3>
 
-<p>
-NexStoriess may receive compensation through affiliate partnerships when visitors access third-party websites through links available on this page.
-</p>
+<p>NexStoriess may receive compensation through affiliate partnerships when visitors access third-party websites through links available on this page.</p>
 
-<p>
-This website provides editorial and informational content only and does not provide medical advice, diagnosis or treatment.
-</p>
+<p>This website provides editorial and informational content only and does not provide medical advice, diagnosis or treatment.</p>
 
-<p>
-Statements regarding wellness support products have not been evaluated by the Food and Drug Administration (FDA).
-</p>
+<p>Statements regarding wellness support products have not been evaluated by the Food and Drug Administration (FDA).</p>
 
-<p>
-Products mentioned are not intended to diagnose, treat, cure or prevent any disease.
-</p>
+<p>Products mentioned are not intended to diagnose, treat, cure or prevent any disease.</p>
 
 </div>
 
@@ -548,16 +445,11 @@ Products mentioned are not intended to diagnose, treat, cure or prevent any dise
 <div class="footer-wrap">
 
 <div class="logo">
-
-<div class="logo-icon">
-N
-</div>
-
+<div class="logo-icon">N</div>
 <div class="logo-text">
 NexStoriess
 <span>Men's Wellness Platform</span>
 </div>
-
 </div>
 
 <p class="small">
@@ -565,7 +457,8 @@ Editorial wellness content and modern men's lifestyle information platform.
 </p>
 
 <p class="small">
-© 2026 NexStoriess — All Rights Reserved.
+© 2026 NexStoriess — All Rights Reserved.<br>
+Contact: pesicunha222@gmail.com
 </p>
 
 </div>
@@ -573,38 +466,20 @@ Editorial wellness content and modern men's lifestyle information platform.
 </footer>
 
 <script>
+const checkbox=document.getElementById('accept');
+const btn1=document.getElementById('btn1');
+const btn2=document.getElementById('btn2');
 
-const checkbox = document.getElementById('accept');
-const btn1 = document.getElementById('btn1');
-const btn2 = document.getElementById('btn2');
-
-checkbox.addEventListener('change', function(){
-
+checkbox.addEventListener('change',function(){
 if(this.checked){
-
 btn1.classList.add('active');
 btn2.classList.add('active');
-
 }else{
-
 btn1.classList.remove('active');
 btn2.classList.remove('active');
-
 }
-
 });
-
 </script>
 
 </body>
 </html>
-```
-
-# COMO ATUALIZAR
-
-1. Abra seu `index.html`
-2. Apague tudo
-3. Cole o novo código
-4. Clique em `Commit changes`
-5. Aguarde a Netlify atualizar
-6. Abra seu site e teste
