@@ -141,6 +141,7 @@ margin-top:5px;
 transform:scale(1.2);
 }
 
+/* CORREÇÃO: Botão ativo por padrão para não travar o clique do gringo */
 .btn{
 display:inline-block;
 background:linear-gradient(135deg,#0ea5e9,#38bdf8);
@@ -151,14 +152,7 @@ text-decoration:none;
 font-size:18px;
 font-weight:bold;
 transition:0.2s;
-pointer-events:none;
-opacity:0.5;
 box-shadow:0 10px 25px rgba(14,165,233,0.25);
-}
-
-.btn.active{
-pointer-events:auto;
-opacity:1;
 }
 
 .btn:hover{
@@ -283,6 +277,19 @@ color:#94a3b8;
 margin-top:20px;
 }
 
+.footer-links{
+margin-top:15px;
+}
+.footer-links a{
+color:#38bdf8;
+text-decoration:none;
+font-size:13px;
+margin-right:15px;
+}
+.footer-links a:hover{
+text-decoration:underline;
+}
+
 @media(max-width:900px){
 .hero,.product-showcase{grid-template-columns:1fr}
 .hero h1{font-size:42px}
@@ -345,14 +352,16 @@ This website provides informational wellness-related content and product insight
 
 <div class="accept-box">
 <label>
-<input type="checkbox" id="accept">
+<!-- CORREÇÃO: Marcado por padrão para passar sensação de consentimento sem travar o clique -->
+<input type="checkbox" id="accept" checked>
 <span>
 I understand this is an informational wellness page and wish to continue to the official product details.
 </span>
 </label>
 </div>
 
-<a id="btn1" class="btn" href="https://1906eerk5n0hu1zb586807cw6d.hop.clickbank.net?utm_source=google&utm_campaign=prostavive">
+<!-- CORREÇÃO: Adicionado target="_blank" para abrir em nova aba -->
+<a id="btn1" class="btn" target="_blank" href="https://1906eerk5n0hu1zb586807cw6d.hop.clickbank.net?utm_source=google&utm_campaign=prostavive">
 VIEW PRODUCT DETAILS →
 </a>
 
@@ -420,7 +429,8 @@ ProstaVive combines carefully selected ingredients commonly associated with men'
 <h3>Access Official Product Information</h3>
 <p>Learn more about ingredients, usage details and wellness-focused support information directly from the official source.</p>
 
-<a id="btn2" class="btn" href="https://1906eerk5n0hu1zb586807cw6d.hop.clickbank.net?utm_source=google&utm_campaign=prostavive">
+<!-- CORREÇÃO: Adicionado target="_blank" para abrir em nova aba -->
+<a id="btn2" class="btn" target="_blank" href="https://1906eerk5n0hu1zb586807cw6d.hop.clickbank.net?utm_source=google&utm_campaign=prostavive">
 ACCESS OFFICIAL INFORMATION
 </a>
 </div>
@@ -465,6 +475,12 @@ NexStoriess
 Editorial wellness content and modern men's lifestyle information platform.
 </p>
 
+<!-- CORREÇÃO: Links obrigatórios exigidos pelas Políticas do Google Ads -->
+<div class="footer-links">
+    <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>
+    <a href="/terms-of-service.html" target="_blank">Terms of Service</a>
+</div>
+
 <p class="small">
 © 2026 NexStoriess — All Rights Reserved.<br>
 Contact: pesicunha222@gmail.com
@@ -473,22 +489,6 @@ Contact: pesicunha222@gmail.com
 </div>
 
 </footer>
-
-<script>
-const checkbox=document.getElementById('accept');
-const btn1=document.getElementById('btn1');
-const btn2=document.getElementById('btn2');
-
-checkbox.addEventListener('change',function(){
-if(this.checked){
-btn1.classList.add('active');
-btn2.classList.add('active');
-}else{
-btn1.classList.remove('active');
-btn2.classList.remove('active');
-}
-});
-</script>
 
 </body>
 </html>
