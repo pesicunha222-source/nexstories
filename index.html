@@ -1,491 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ProstaVive | Men's Wellness Support</title>
-<meta name="description" content="Discover wellness-focused support designed for healthy urinary flow, circulation and male vitality.">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#eef7fc;
-color:#0f172a;
-line-height:1.7;
-}
-
-header{
-background:#ffffff;
-padding:18px 20px;
-border-bottom:1px solid #dbeafe;
-position:sticky;
-top:0;
-z-index:999;
-}
-
-.header-wrap{
-max-width:1180px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:12px;
-font-size:24px;
-font-weight:bold;
-color:#0f172a;
-}
-
-.logo-icon{
-width:48px;
-height:48px;
-border-radius:14px;
-background:linear-gradient(135deg,#0ea5e9,#38bdf8);
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-font-size:22px;
-font-weight:bold;
-box-shadow:0 8px 20px rgba(14,165,233,0.25);
-}
-
-.logo-text span{
-display:block;
-font-size:12px;
-font-weight:normal;
-color:#64748b;
-margin-top:-4px;
-}
-
-nav a{
-text-decoration:none;
-margin-left:20px;
-font-size:14px;
-color:#475569;
-font-weight:600;
-}
-
-.hero{
-max-width:1180px;
-margin:auto;
-padding:70px 20px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:70px;
-align-items:center;
-}
-
-.tag{
-display:inline-block;
-background:#e0f2fe;
-color:#0284c7;
-padding:8px 14px;
-border-radius:40px;
-font-size:12px;
-font-weight:bold;
-margin-bottom:22px;
-}
-
-.hero h1{
-font-size:58px;
-line-height:1.05;
-margin-bottom:26px;
-}
-
-.hero h1 span{
-color:#0284c7;
-}
-
-.hero p{
-font-size:18px;
-color:#475569;
-margin-bottom:24px;
-}
-
-.notice{
-background:#ffffff;
-padding:18px;
-border-left:5px solid #38bdf8;
-border-radius:14px;
-margin-bottom:25px;
-box-shadow:0 5px 20px rgba(0,0,0,0.04);
-}
-
-.accept-box{
-background:#ffffff;
-padding:22px;
-border-radius:18px;
-margin-bottom:24px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-}
-
-.accept-box label{
-display:flex;
-gap:12px;
-align-items:flex-start;
-font-size:15px;
-color:#334155;
-}
-
-.accept-box input{
-margin-top:5px;
-transform:scale(1.2);
-}
-
-.btn{
-display:inline-block;
-background:linear-gradient(135deg,#0ea5e9,#38bdf8);
-color:#fff;
-padding:18px 34px;
-border-radius:16px;
-text-decoration:none;
-font-size:18px;
-font-weight:bold;
-transition:0.2s;
-box-shadow:0 10px 25px rgba(14,165,233,0.25);
-}
-
-.btn:hover{
-transform:scale(1.03);
-}
-
-.hero-image{
-background:#ffffff;
-padding:20px;
-border-radius:30px;
-box-shadow:0 15px 40px rgba(0,0,0,0.08);
-text-align:center;
-}
-
-.hero-image img{
-width:100%;
-border-radius:20px;
-display:block;
-}
-
-.section{
-max-width:1180px;
-margin:90px auto;
-padding:0 20px;
-}
-
-.section-title{
-font-size:42px;
-margin-bottom:20px;
-text-align:center;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:35px;
-}
-
-.card{
-background:#ffffff;
-padding:30px;
-border-radius:26px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-}
-
-.card h3{
-font-size:24px;
-margin-bottom:15px;
-}
-
-.card p{
-font-size:15px;
-color:#475569;
-}
-
-.product-showcase{
-background:#ffffff;
-padding:50px;
-border-radius:34px;
-box-shadow:0 10px 35px rgba(0,0,0,0.06);
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
-align-items:center;
-}
-
-.product-showcase img{
-width:100%;
-border-radius:24px;
-}
-
-.product-showcase h2{
-font-size:44px;
-margin-bottom:20px;
-}
-
-.product-showcase ul{
-padding-left:18px;
-margin:24px 0;
-}
-
-.product-showcase li{
-margin-bottom:12px;
-color:#334155;
-}
-
-.cta-box{
-background:#0f172a;
-padding:35px;
-border-radius:28px;
-margin-top:30px;
-}
-
-.cta-box h3{
-font-size:34px;
-color:#ffffff;
-margin-bottom:15px;
-}
-
-.cta-box p{
-color:#cbd5e1;
-margin-bottom:22px;
-}
-
-footer{
-background:#0f172a;
-padding:60px 20px;
-margin-top:90px;
-color:#cbd5e1;
-}
-
-.footer-wrap{
-max-width:1180px;
-margin:auto;
-}
-
-.small{
-font-size:13px;
-line-height:1.8;
-color:#94a3b8;
-margin-top:20px;
-}
-
-.footer-links{
-margin-top:15px;
-}
-.footer-links a{
-color:#38bdf8;
-text-decoration:none;
-font-size:13px;
-margin-right:15px;
-}
-.footer-links a:hover{
-text-decoration:underline;
-}
-
-@media(max-width:900px){
-.hero,.product-showcase{grid-template-columns:1fr}
-.hero h1{font-size:42px}
-.product-showcase h2{font-size:34px}
-.section-title{font-size:34px}
-nav{display:none}
-}
-</style>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18180076427"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18180076427');
-</script>
-
-<script> window.clickbank = { vendor: "nexstories" } </script> <script src="https://scripts.clickbank.net/hop.min.js" defer></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProstaVive™ | Official Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background: #f4f7f6; color: #333; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 50px auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #1b4d3e; font-size: 26px; }
+        .product-img { max-width: 250px; margin: 20px 0; }
+        .bullets { text-align: left; margin: 20px auto; display: inline-block; }
+        .bullets li { margin: 10px 0; font-size: 16px; }
+        .btn { display: block; background: #ff6f00; color: white; text-decoration: none; padding: 15px 30px; font-size: 20px; font-weight: bold; border-radius: 5px; margin: 20px 0; border-bottom: 5px solid #b34a00; }
+        .btn:hover { background: #e66400; }
+        .footer-links { margin-top: 40px; font-size: 12px; color: #777; }
+        .footer-links a { color: #777; text-decoration: none; margin: 0 10px; }
+        .section-anchor { padding: 10px; margin-top: 10px; }
+    </style>
 </head>
-
 <body>
 
-<header>
-<div class="header-wrap">
+    <!-- LINK DO PRODUTO (ID: top) -->
+    <div id="top" class="container">
+        <p style="color: red; font-weight: bold;">⚠️ SPECIAL DISCOUNT OFFER AVAILABLE FOR A LIMITED TIME ONLY!</p>
+        <h1>Get ProstaVive™ From The Official Store</h1>
+        
+        <!-- Substitua pelo link da imagem do seu pote se tiver, ou deixe sem -->
+        <img class="product-img" src="https://prostavive.com/assets/images/prostavive-bottles.png" alt="ProstaVive">
 
-<div class="logo">
-<div class="logo-icon">N</div>
-<div class="logo-text">
-NexStories
-<span>Men's Wellness Platform</span>
-</div>
-</div>
+        <ul class="bullets">
+            <li>✅ <strong>Supports Healthy Prostate</strong> Function Naturally</li>
+            <li>✅ <strong>100% Natural Ingredients</strong> & Made In The USA</li>
+            <li>✅ <strong>As Low As $39 Per Bottle</strong> On Bulk Pack</li>
+            <li>✅ <strong>Free Shipping</strong> On Select Packages</li>
+        </ul>
 
-<nav>
-<a href="#wellness">Wellness</a>
-<a href="#product">Product</a>
-<a href="#transparency">Transparency</a>
-</nav>
+        <!-- SEU BOTÃO DE VENDAS PRINCIPAL -->
+        <!-- SUBSTITUA O '#' PELO SEU HOPLINK DA CLICKBANK SE QUISER -->
+        <a href="https://nexstoreis.netlify.app" class="btn">VISIT THE OFFICIAL WEBSITE TODAY →</a>
 
-</div>
-</header>
+        <p style="font-size: 14px; color: #555;">🔒 Secure 256-Bit SSL Checkout</p>
+    </div>
 
-<section class="hero">
+    <!-- SEÇÕES INVISÍVEIS PARA OS SITELINKS DO GOOGLE ACEITAR -->
+    <div id="guarantee" class="section-anchor">
+        <p style="font-size: 13px; color: #666;">All orders are backed by a <strong>180-Day Money Back Guarantee</strong>.</p>
+    </div>
 
-<div>
+    <div id="discount" class="section-anchor">
+        <p style="font-size: 13px; color: #666;">Save up to <strong>$300 Off</strong> on 6-bottle packages today.</p>
+    </div>
 
-<span class="tag">MEN'S WELLNESS SUPPORT</span>
+    <div id="secure" class="section-anchor">
+        <p style="font-size: 13px; color: #666;">Your privacy is 100% protected by our secure checkout system.</p>
+    </div>
 
-<h1>
-Support healthy urinary flow, circulation and <span>male vitality</span>
-</h1>
+    <div id="ingredients" class="section-anchor">
+        <p style="font-size: 13px; color: #666;">Made with 100% high-quality, non-GMO natural ingredients.</p>
+    </div>
 
-<p>
-Men across the world are increasingly exploring wellness-focused support solutions designed for prostate wellness, circulation and everyday vitality.
-</p>
-
-<div class="notice">
-This website provides informational wellness-related content and product insights intended for adult audiences.
-</div>
-
-<div class="accept-box">
-<label>
-<input type="checkbox" id="accept" checked>
-<span>
-I understand this is an informational wellness page and wish to continue to the official product details.
-</span>
-</label>
-</div>
-
-<a id="btn1" class="btn" target="_blank" href="https://94b0dagp2otgy7xi5g0410flb1.hop.clickbank.net">
-VIEW PRODUCT DETAILS →
-</a>
-
-</div>
-
-<div class="hero-image">
-<img src="ProstaviveIngredients1-2.jpg" alt="ProstaVive Natural Ingredients">
-</div>
-
-</section>
-
-<section class="section" id="wellness">
-
-<h2 class="section-title">
-Why men are paying attention to prostate wellness support
-</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Healthy Urinary Flow</h3>
-<p>Modern wellness discussions increasingly focus on urinary comfort, circulation and nighttime routine support.</p>
-</div>
-
-<div class="card">
-<h3>Male Vitality</h3>
-<p>Confidence, energy, circulation and healthy daily routines continue becoming major men's wellness priorities.</p>
-</div>
-
-<div class="card">
-<h3>Natural Wellness Routines</h3>
-<p>Plant-based wellness formulas and lifestyle support products continue growing in popularity worldwide.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="product">
-
-<div class="product-showcase">
-
-<div>
-<img src="ProstaviveIngredients1-2.jpg" alt="ProstaVive Formula">
-</div>
-
-<div>
-
-<h2>ProstaVive Wellness Formula</h2>
-
-<p>
-ProstaVive combines carefully selected ingredients commonly associated with men's wellness support, healthy circulation and urinary wellness routines.
-</p>
-
-<ul>
-<li>Daily wellness support for men</li>
-<li>Healthy urinary flow support</li>
-<li>Circulation-focused ingredient blend</li>
-<li>Male vitality support formula</li>
-<li>Plant-based wellness ingredients</li>
-<li>Adult men's wellness routine</li>
-</ul>
-
-<div class="cta-box">
-<h3>Access Official Product Information</h3>
-<p>Learn more about ingredients, usage details and wellness-focused support information directly from the official source.</p>
-
-<a id="btn2" class="btn" target="_blank" href="https://94b0dagp2otgy7xi5g0410flb1.hop.clickbank.net">
-ACCESS OFFICIAL INFORMATION
-</a>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="transparency">
-
-<div class="card">
-
-<h3>Transparency & Editorial Notice</h3>
-
-<p>NexStories may receive compensation through affiliate partnerships when visitors access third-party websites through links available on this page.</p>
-
-<p>This website provides editorial and informational content only and does not provide medical advice, diagnosis or treatment.</p>
-
-<p>Statements regarding wellness support products have not been evaluated by the Food and Drug Administration (FDA).</p>
-
-<p>Products mentioned are not intended to diagnose, treat, cure or prevent any disease.</p>
-
-</div>
-
-</section>
-
-<footer>
-
-<div class="footer-wrap">
-
-<div class="logo">
-<div class="logo-icon">N</div>
-<div class="logo-text">
-NexStories
-<span>Men's Wellness Platform</span>
-</div>
-</div>
-
-<p class="small">
-Editorial wellness content and modern men's lifestyle information platform.
-</p>
-
-<div class="footer-links">
-    <a href="/privacy-policy.html" target="_blank">Privacy Policy</a>
-    <a href="/terms-of-service.html" target="_blank">Terms of Service</a>
-</div>
-
-<p class="small">
-© 2026 NexStories — All Rights Reserved.<br>
-Contact: pesicunha222@gmail.com
-</p>
-
-</div>
-
-</footer>
+    <!-- RODAPÉ OBRIGATÓRIO (COMPLIANCE) -->
+    <div class="footer-links">
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p style="font-size: 10px; line-height: 1.5;">FTC Disclaimer: Results may vary. These statements have not been evaluated by the FDA. This site is not affiliated with Google or Alphabet Inc.</p>
+    </div>
 
 </body>
 </html>
