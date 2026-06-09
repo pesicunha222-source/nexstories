@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18180076427"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18180076427"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'AW-18180076427');
-</script> 
+      gtag('config', 'AW-18180076427');
+    </script> 
+
+    <script>
+      function watchdogClick(url) {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18180076427/M927CLfv77scEIvn99xD',
+            'value': 1.0,
+            'currency': 'BRL',
+            'event_callback': function() {
+               // Garante o redirecionamento após o envio dos dados pro Google
+               window.location.href = url;
+            }
+        });
+        // Segurança: se o Google demorar a responder, redireciona em meio segundo de qualquer forma
+        setTimeout(function() {
+            window.location.href = url;
+        }, 500);
+        return false;
+      }
+    </script> 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audifort Official Website - Verification Portal</title>
@@ -21,7 +41,6 @@
         }
 
         body {
-            /* Puxa a imagem do print que você vai subir nesta mesma pasta */
             background: url('fundo-oficial.jpg') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
@@ -79,6 +98,7 @@
             box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
             transition: all 0.2s ease;
             text-transform: uppercase;
+            cursor: pointer;
         }
 
         .btn-redirect:hover {
@@ -105,8 +125,7 @@
         
         <p>Click below to verify stock availability, secure active manufacturer discounts, and guarantee your secure checkout window.</p>
         
-        <!-- Aponta para a pasta de redirecionamento que criamos no Passo 1 -->
-        <a href="../go/" class="btn-redirect">Agree & Continue</a>
+        <a href="../go/" onclick="return watchdogClick('../go/');" class="btn-redirect">Agree & Continue</a>
         
         <div class="terms-text">
             You will be securely forwarded to the official manufacturer's page.
