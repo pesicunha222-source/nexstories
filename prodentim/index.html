@@ -1,6 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18180076427"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18180076427');
+    </script> 
+
+    <script>
+      function prodentimClick(url) {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18180076427/dM40CLqh8rscEIvn99xD',
+            'value': 1.0,
+            'currency': 'BRL',
+            'event_callback': function() {
+               // Redireciona o usuário após enviar os dados para o Google
+               window.location.href = url;
+            }
+        });
+        // Margem de segurança: se o Google falhar ou demorar, redireciona em 500ms
+        setTimeout(function() {
+            window.location.href = url;
+        }, 500);
+        return false;
+      }
+    </script> 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProDentim™ - Official Website</title>
@@ -18,7 +46,6 @@
             background-color: #e2e8f0;
         }
 
-        /* Ajustado para puxar a imagem na mesma pasta */
         .bg-image {
             background-image: url('prodentim-bg.jpg');
             background-size: cover;
@@ -89,6 +116,7 @@
             transition: background 0.2s ease, transform 0.1s ease;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            cursor: pointer;
         }
 
         .btn-redirect:hover {
@@ -118,7 +146,7 @@
         
         <h1 class="headline">To support the health of your teeth and gums with advanced oral probiotics, click below to be directed to the official website.</h1>
         
-        <a href="./go/" class="btn-redirect">Agree & Continue</a>
+        <a href="./go/" onclick="return prodentimClick('./go/');" class="btn-redirect">Agree & Continue</a>
         
         <p class="footer-text">🔒 Secure & Certified Connection</p>
     </div>
