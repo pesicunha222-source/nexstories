@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProDentim™ - Official Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            background-color: #e2e8f0;
+        }
+
+        /* Imagem que você mandou configurada como background oficial */
+        .bg-image {
+            background-image: url('prodentim-bg.jpg.jpg');
+            background-size: cover;
+            background-position: center top;
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        /* Camada suave para dar contraste na caixa branca */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 32, 23, 0.4);
+            z-index: 2;
+        }
+
+        /* Caixa Central limpa e profissional */
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            background-color: #ffffff;
+            padding: 45px 35px;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+            text-align: center;
+            width: 90%;
+            max-width: 440px;
+        }
+
+        .logo-text {
+            font-size: 26px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: #15803d; /* Verde oficial do ProDentim */
+        }
+
+        .headline {
+            font-size: 19px;
+            color: #334155;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+
+        /* Botão Verde de Confirmação Segura */
+        .btn-redirect {
+            display: block;
+            background-color: #16a34a; 
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 16px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+            transition: background 0.2s ease, transform 0.1s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-redirect:hover {
+            background-color: #15803d;
+        }
+
+        .btn-redirect:active {
+            transform: scale(0.98);
+        }
+
+        .footer-text {
+            margin-top: 25px;
+            font-size: 11px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+    
+    </head>
+<body>
+
+    <div class="bg-image"></div>
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="logo-text">Pro<span>Dentim™</span></div>
+        
+        <h1 class="headline">To support the health of your teeth and gums with advanced oral probiotics, click below to be directed to the official website.</h1>
+        
+        <a href="./go/" class="btn-redirect">Click Here to Enter</a>
+        
+        <p class="footer-text">🔒 Secure & Certified Connection</p>
+    </div>
+
+</body>
+</html>
